@@ -15,32 +15,37 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const genre_service_1 = require("./genre.service");
 const create_genre_dto_1 = require("./dto/create-genre.dto");
+const swagger_1 = require("@nestjs/swagger");
 let GenreController = class GenreController {
-    constructor(genreServices) {
-        this.genreServices = genreServices;
+    constructor(genreService) {
+        this.genreService = genreService;
     }
     postGenre(genre) {
-        return this.genreServices.insert(genre);
+        return this.genreService.insert(genre);
     }
     getAll() {
-        return this.genreServices.getAllGenre();
+        return this.genreService.getAllGenre();
     }
 };
 __decorate([
-    common_1.Post('post'),
+    swagger_1.ApiOperation({ description: 'Create genre' }),
+    swagger_1.ApiCreatedResponse({ description: 'Genre created successfully' }),
+    common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_genre_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], GenreController.prototype, "postGenre", null);
 __decorate([
+    swagger_1.ApiOperation({ description: 'Retrieve genres' }),
+    swagger_1.ApiOkResponse({ description: 'Genres retrieved successfully' }),
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], GenreController.prototype, "getAll", null);
 GenreController = __decorate([
-    common_1.Controller('genre'),
+    common_1.Controller('genres'),
     __metadata("design:paramtypes", [genre_service_1.default])
 ], GenreController);
 exports.default = GenreController;

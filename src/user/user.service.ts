@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import UserEntity from '../db/user.entity';
+import UserEntity from '../db/entity/user.entity';
 import CreateUserDto from './dto/create-user.dto';
-import BookEntity from '../db/book.entity';
+import BookEntity from '../db/entity/book.entity';
 import { getConnection } from "typeorm";
 
 @Injectable()

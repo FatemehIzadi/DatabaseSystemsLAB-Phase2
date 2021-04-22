@@ -16,6 +16,7 @@ exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
 const user_service_1 = require("./user.service");
 const create_user_dto_1 = require("./dto/create-user.dto");
+const swagger_1 = require("@nestjs/swagger");
 let UserController = class UserController {
     constructor(usersService) {
         this.usersService = usersService;
@@ -31,21 +32,33 @@ let UserController = class UserController {
     }
 };
 __decorate([
-    common_1.Post('post'),
+    swagger_1.ApiOperation({ description: 'Create user' }),
+    swagger_1.ApiCreatedResponse({ description: 'User created successfully' }),
+    common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_user_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "postUser", null);
 __decorate([
+    swagger_1.ApiOperation({ description: 'Retrieve users' }),
+    swagger_1.ApiOkResponse({ description: 'Users retrieved successfully' }),
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "getAll", null);
 __decorate([
-    common_1.Get('books'),
-    __param(0, common_1.Body('userID', common_1.ParseIntPipe)),
+    swagger_1.ApiOperation({ description: 'Retrieves books of user' }),
+    swagger_1.ApiOkResponse({ description: 'Books of user retrieved successfully' }),
+    swagger_1.ApiNotFoundResponse({ description: 'User not found' }),
+    swagger_1.ApiParam({
+        name: 'userID',
+        description: 'User ID',
+        schema: { type: 'integer', default: 1 }
+    }),
+    common_1.Get(':userID/books'),
+    __param(0, common_1.Param('userID', common_1.ParseIntPipe)),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)

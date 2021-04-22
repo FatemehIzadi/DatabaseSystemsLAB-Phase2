@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BooksService = void 0;
-const book_entity_1 = require("../db/book.entity");
-const user_entity_1 = require("../db/user.entity");
-const genre_entity_1 = require("../db/genre.entity");
+const book_entity_1 = require("../db/entity/book.entity");
+const user_entity_1 = require("../db/entity/user.entity");
+const genre_entity_1 = require("../db/entity/genre.entity");
 class BooksService {
     async insert(bookDetails) {
         const { name, userID, genreIDs } = bookDetails;

@@ -13,6 +13,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
 const books_service_1 = require("./books.service");
 const create_book_dto_1 = require("./dto/create-book.dto");
 let BooksController = class BooksController {
@@ -27,20 +28,24 @@ let BooksController = class BooksController {
     }
 };
 __decorate([
-    common_1.Post('post'),
+    swagger_1.ApiOperation({ description: 'Create book' }),
+    swagger_1.ApiCreatedResponse({ description: 'Book created successfully' }),
+    common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_book_dto_1.default]),
     __metadata("design:returntype", void 0)
 ], BooksController.prototype, "postBook", null);
 __decorate([
+    swagger_1.ApiOperation({ description: 'Retrieve books' }),
+    swagger_1.ApiOkResponse({ description: 'Books retrieved successfully' }),
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], BooksController.prototype, "getAll", null);
 BooksController = __decorate([
-    common_1.Controller('book'),
+    common_1.Controller('books'),
     __metadata("design:paramtypes", [books_service_1.BooksService])
 ], BooksController);
 exports.default = BooksController;

@@ -15,8 +15,8 @@ let UserModule = class UserModule {
 UserModule = __decorate([
     common_1.Module({
         imports: [],
+        controllers: [user_controller_1.UserController],
         providers: [user_service_1.UserService],
-        controllers: [user_controller_1.UserController]
     })
 ], UserModule);
 exports.UserModule = UserModule;

@@ -13,8 +13,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HelloController = void 0;
-const common_1 = require("@nestjs/common");
 const hello_service_1 = require("./hello.service");
+const common_1 = require("@nestjs/common");
 const person_dto_1 = require("./dto/person.dto");
 const swagger_1 = require("@nestjs/swagger");
 let HelloController = class HelloController {

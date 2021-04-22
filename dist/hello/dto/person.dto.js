@@ -16,7 +16,9 @@ class PersonDto {
 }
 __decorate([
     class_validator_1.Length(3, 10),
-    swagger_1.ApiProperty({ description: 'Enter Your Name > ', minLength: 3, default: 'Ali', maxLength: 10 }),
+    swagger_1.ApiProperty({
+        description: 'Enter Your Name > ', minLength: 3, default: 'Ali', maxLength: 10
+    }),
     __metadata("design:type", String)
 ], PersonDto.prototype, "name", void 0);
 __decorate([

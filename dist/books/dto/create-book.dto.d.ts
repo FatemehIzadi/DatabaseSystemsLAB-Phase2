@@ -1,6 +1,5 @@
-export declare class CreateBookDTO {
-    readonly id: number;
-    readonly title: string;
-    readonly description: string;
-    readonly author: string;
+export default class CreateBookDto {
+    readonly name: string;
+    readonly userID: number;
+    readonly genreIDs: number[];
 }

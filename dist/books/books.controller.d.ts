@@ -3,6 +3,6 @@ import CreateBookDto from './dto/create-book.dto';
 export default class BooksController {
     private readonly booksService;
     constructor(booksService: BooksService);
-    postBook(book: CreateBookDto): Promise<import("../db/book.entity").default>;
-    getAll(): Promise<import("../db/book.entity").default[]>;
+    postBook(book: CreateBookDto): Promise<import("../db/entity/book.entity").default>;
+    getAll(): Promise<import("../db/entity/book.entity").default[]>;
 }

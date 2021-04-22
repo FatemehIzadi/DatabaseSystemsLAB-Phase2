@@ -13,7 +13,8 @@ let HelloService = class HelloService {
         let msg;
         if (person.year) {
             let current_year = new Date().getFullYear();
-            console.log(`Welcome ${person.name} - your birthday is ${person.year}`);
+            console.log(`Welcome ${person.name} - your birthday is ${person
+                .year}`);
             msg = `Welcome ${person.name} - your are ${current_year - person.year} years old!`;
         }
         else {
