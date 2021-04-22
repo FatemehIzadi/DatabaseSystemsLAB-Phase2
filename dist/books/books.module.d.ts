@@ -1,2 +1,2 @@
-export declare class BooksModule {
+export default class BooksModule {
 }

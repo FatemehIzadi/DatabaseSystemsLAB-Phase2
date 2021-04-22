@@ -6,7 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GenreModule = void 0;
 const common_1 = require("@nestjs/common");
 const genre_service_1 = require("./genre.service");
 const genre_controller_1 = require("./genre.controller");
@@ -14,9 +13,10 @@ let GenreModule = class GenreModule {
 };
 GenreModule = __decorate([
     common_1.Module({
-        providers: [genre_service_1.GenreService],
-        controllers: [genre_controller_1.GenreController]
+        imports: [],
+        controllers: [genre_controller_1.default],
+        providers: [genre_service_1.default],
     })
 ], GenreModule);
-exports.GenreModule = GenreModule;
+exports.default = GenreModule;
 //# sourceMappingURL=genre.module.js.map

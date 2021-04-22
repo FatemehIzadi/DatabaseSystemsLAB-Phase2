@@ -1,10 +1,8 @@
 import { BooksService } from './books.service';
-import { CreateBookDTO } from './dto/create-book.dto';
-export declare class BooksController {
-    private booksService;
+import CreateBookDto from './dto/create-book.dto';
+export default class BooksController {
+    private readonly booksService;
     constructor(booksService: BooksService);
-    getBooks(): Promise<any>;
-    getBook(bookID: any): Promise<any>;
-    addBook(createBookDTO: CreateBookDTO): Promise<any>;
-    deleteBook(query: any): Promise<any>;
+    postBook(book: CreateBookDto): Promise<import("../db/book.entity").default>;
+    getAll(): Promise<import("../db/book.entity").default[]>;
 }

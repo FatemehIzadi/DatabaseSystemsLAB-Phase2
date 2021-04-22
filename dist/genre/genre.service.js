@@ -6,12 +6,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GenreService = void 0;
 const common_1 = require("@nestjs/common");
-let GenreService = class GenreService {
+const genre_entity_1 = require("../db/genre.entity");
+let GenreServices = class GenreServices {
+    async insert(genreDetails) {
+        const genreEntity = genre_entity_1.default.create();
+        const { type } = genreDetails;
+        genreEntity.type = type;
+        await genre_entity_1.default.save(genreEntity);
+        return genreEntity;
+    }
+    async getAllGenre() {
+        return await genre_entity_1.default.find();
+    }
 };
-GenreService = __decorate([
+GenreServices = __decorate([
     common_1.Injectable()
-], GenreService);
-exports.GenreService = GenreService;
+], GenreServices);
+exports.default = GenreServices;
 //# sourceMappingURL=genre.service.js.map

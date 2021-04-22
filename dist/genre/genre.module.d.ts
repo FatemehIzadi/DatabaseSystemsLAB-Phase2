@@ -1,2 +1,2 @@
-export declare class GenreModule {
+export default class GenreModule {
 }

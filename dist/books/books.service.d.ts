@@ -1,12 +1,6 @@
+import BookEntity from '../db/book.entity';
+import CreateBookDto from './dto/create-book.dto';
 export declare class BooksService {
-    books: {
-        id: number;
-        title: string;
-        description: string;
-        author: string;
-    }[];
-    getBooks(): Promise<any>;
-    getBook(bookID: any): Promise<any>;
-    addBook(book: any): Promise<any>;
-    deleteBook(bookID: any): Promise<any>;
+    insert(bookDetails: CreateBookDto): Promise<BookEntity>;
+    getAllBooks(): Promise<BookEntity[]>;
 }
