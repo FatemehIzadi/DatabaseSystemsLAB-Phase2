@@ -1,40 +1,28 @@
-import { Injectable, HttpException } from '@nestjs/common';
-import { BOOKS } from '../mocks/books.mocks';
 
-@Injectable()
+import BookEntity from '../db/book.entity';
+import CreateBookDto from './dto/create-book.dto';
+import UserEntity from '../db/user.entity';
+import { createQueryBuilder, getConnection } from 'typeorm';
+import GenreEntity from '../db/genre.entity';
+
 export class BooksService {
-    books = BOOKS;
 
-    getBooks(): Promise<any> {
-        return new Promise(resolve => {
-            resolve(this.books);
-        });
+  async insert(bookDetails: CreateBookDto): Promise<BookEntity> {
+    const { name , userID , genreIDs } = bookDetails;
+    const book = new BookEntity();
+    book.name = name;
+    book.user = await UserEntity.findOne(userID) ;
+    book.genres=[];
+    for ( let i = 0; i < genreIDs.length ; i++)
+    {
+             const genre = await GenreEntity.findOne(genreIDs[i]);
+             book.genres.push(genre);
     }
-    getBook(bookID): Promise<any> {
-        let id = Number(bookID);
-        return new Promise(resolve => {
-            const book = this.books.find(book => book.id === id);
-            if (!book) {
-                throw new HttpException('Book does not exist!', 404);
-            }
-            resolve(book);
-        });
-    }
-    addBook(book): Promise<any> {
-        return new Promise(resolve => {
-            this.books.push(book);
-            resolve(this.books);
-        });
-    }
-    deleteBook(bookID): Promise<any> {
-        let id = Number(bookID);
-        return new Promise(resolve => {
-            let index = this.books.findIndex(book => book.id === id);
-            if (index === -1) {
-                throw new HttpException('Book does not exist!', 404);
-            }
-            this.books.splice(1, index);
-            resolve(this.books);
-        });
-    }
+    await book.save();
+    return book;
+  }
+  async getAllBooks(): Promise<BookEntity[] > {
+    // const user: UserEntity = await UserEntity.findOne({where: {id: 2}, relations: ['books']});
+    return BookEntity.find();
+  }
 }
