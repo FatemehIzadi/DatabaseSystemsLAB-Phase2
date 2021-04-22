@@ -8,25 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const typeorm_1 = require("@nestjs/typeorm");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
-const user_module_1 = require("./user/user.module");
+const hello_module_1 = require("./hello/hello.module");
 const books_module_1 = require("./books/books.module");
 const genre_module_1 = require("./genre/genre.module");
-const user_entity_1 = require("./db/user.entity");
-const book_entity_1 = require("./db/book.entity");
+const user_module_1 = require("./user/user.module");
+const typeorm_1 = require("@nestjs/typeorm");
 const genre_entity_1 = require("./db/genre.entity");
+const book_entity_1 = require("./db/book.entity");
+const genre_entity_2 = require("./db/genre.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [user_module_1.UserModule,
-            books_module_1.default,
-            genre_module_1.default,
-            typeorm_1.TypeOrmModule.forFeature([user_entity_1.default, book_entity_1.default, genre_entity_1.default]),
-            typeorm_1.TypeOrmModule.forRoot(),
-        ],
+        imports: [hello_module_1.HelloModule, user_module_1.UserModule, books_module_1.default, genre_module_1.default,
+            typeorm_1.TypeOrmModule.forFeature([genre_entity_1.default, book_entity_1.default, genre_entity_2.default]),
+            typeorm_1.TypeOrmModule.forRoot(),],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
