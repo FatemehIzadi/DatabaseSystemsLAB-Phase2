@@ -2041,8 +2041,38 @@
         "signature": "41d9207e66987859c5bb8ebc652db3b5bc73822c4eaf2c1daa5b13d7126073b9",
         "affectsGlobalScope": false
       },
+      "../src/genre/genre.service.ts": {
+        "version": "5d96e7726672276f99356b6c793bfded584322cb9bbbb2062598afb0da4d28dd",
+        "signature": "20a62ec1db4c64d9848aa13baaef248016fb643a3c80f720c75a84706114a6ea",
+        "affectsGlobalScope": false
+      },
+      "../src/genre/genre.controller.ts": {
+        "version": "48a57f9a876a95080ae61b5aec061c6c0255898b8d2223df3878557710952afc",
+        "signature": "8ba55ec2ac383c85bf17c5da30c19030a33457656b40698881ffa8241f79ba0d",
+        "affectsGlobalScope": false
+      },
+      "../src/genre/genre.module.ts": {
+        "version": "b744e964cbc1baea9282741c54fc637bcc631b573b3028aeb31601c7c6afab72",
+        "signature": "519bada8924af57ee79e839db99dcc1c95fcc223fc5ee68eeb455e3de498d806",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.service.ts": {
+        "version": "230ca661961fc66c122621883c098d2b1e1b3bbb212eef1f23df18203f50a490",
+        "signature": "87766d73d7dbeee6ba94874f66534c261407facf6ed49d8f080f095f52366e9d",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.controller.ts": {
+        "version": "efa5fc8dd03af3bbd413b62720d8abd0321337176090ea1b11a01c4b43654cb5",
+        "signature": "190ebe988cb0002a58dfa4e7b206b50e5711d31e854fc018a4c3ef7bf179d757",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.module.ts": {
+        "version": "b5dcf1c13a5239d2257e721e44c1e03ae43443ea7360c7e1a55b94e83371be36",
+        "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "e7748b50af0d1d77f530c9d540b4bfac4da52fd662d1901250eff04e928e946c",
+        "version": "3b738e1142238ee991a3a6ef21da1a3bff4e6e064b2d9189256fd3c5d84db78c",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -4537,7 +4567,9 @@
         "../src/app.controller.ts",
         "../src/app.service.ts",
         "../src/books/books.module.ts",
-        "../src/hello/hello.module.ts"
+        "../src/genre/genre.module.ts",
+        "../src/hello/hello.module.ts",
+        "../src/user/user.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -4555,6 +4587,17 @@
       "../src/books/books.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/mocks/books.mocks.ts"
+      ],
+      "../src/genre/genre.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/genre/genre.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/genre/genre.controller.ts",
+        "../src/genre/genre.service.ts"
+      ],
+      "../src/genre/genre.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/hello/dto/person.dto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -4580,6 +4623,17 @@
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/app.module.ts"
+      ],
+      "../src/user/user.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/user/user.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/user/user.controller.ts",
+        "../src/user/user.service.ts"
+      ],
+      "../src/user/user.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -6968,12 +7022,18 @@
       "../src/books/books.module.ts",
       "../src/books/books.service.ts",
       "../src/books/dto/create-book.dto.ts",
+      "../src/genre/genre.controller.ts",
+      "../src/genre/genre.module.ts",
+      "../src/genre/genre.service.ts",
       "../src/hello/dto/person.dto.ts",
       "../src/hello/hello.controller.ts",
       "../src/hello/hello.module.ts",
       "../src/hello/hello.service.ts",
       "../src/main.ts",
-      "../src/mocks/books.mocks.ts"
+      "../src/mocks/books.mocks.ts",
+      "../src/user/user.controller.ts",
+      "../src/user/user.module.ts",
+      "../src/user/user.service.ts"
     ]
   },
   "version": "4.2.4"
