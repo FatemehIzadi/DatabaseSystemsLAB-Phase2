@@ -1,11 +1,13 @@
+
 {
-    "type": "sqlite",
-    "database": "./database.sqlite",
-    "synchronize": "true",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "dblab",
+    "password": "dblab",
+    "database": "todoapp",
     "entities": [
-        "dist/db/entity/**/*.js"
+        "dist/**/**.entity{.ts,.js}"
     ],
-    "cli": {
-        "entitiesDir": "src/db/entity"
-    }
+    "synchronize": true
 }
