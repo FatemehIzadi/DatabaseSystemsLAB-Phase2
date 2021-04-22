@@ -1,10 +1,5 @@
 export declare class BooksService {
-    books: {
-        id: number;
-        title: string;
-        description: string;
-        author: string;
-    }[];
+    books: any;
     getBooks(): Promise<any>;
     getBook(bookID: any): Promise<any>;
     addBook(book: any): Promise<any>;

@@ -2016,18 +2016,28 @@
         "signature": "f19e62caaef459d906abf50617132054e2a0d263464e641047cfd160451bb35c",
         "affectsGlobalScope": false
       },
+      "../src/mocks/books.mocks.ts": {
+        "version": "504fdd15893dd6ee6c71231e72353f5011e21de21595ff5dfd5461bf00d5c3e8",
+        "signature": "8765165ee398385d7a69dcda81e1433993e378ea106f5cd9fce8bf5ad762bdb8",
+        "affectsGlobalScope": false
+      },
       "../src/books/books.service.ts": {
-        "version": "bc97f64e101bd605bd25b8a4eee8340fe4be1e330b70703273ed7d85bc55ffa1",
-        "signature": "4a45be620b8f58e7e224acd3f6dd39074e4c056b8582eca7fa5e3fcbf5206a9f",
+        "version": "2d8b623f45dc0d6f8a2788c3c36f126b74b6538c4c17f349d44ca988b42152da",
+        "signature": "61c1c7581bc179a5adf0e12708b24d628e94c26bca3b80d4f5860e916aef08b0",
+        "affectsGlobalScope": false
+      },
+      "../src/books/dto/create-book.dto.ts": {
+        "version": "93c17990fc097379071896e2d401c5a7eba220bfba5b8aada4dd5e8320183b7b",
+        "signature": "34a73239b15745ad473f66855f5c1815127fc2e9ee3f16e1500d65557a6d461b",
         "affectsGlobalScope": false
       },
       "../src/books/books.controller.ts": {
-        "version": "0ed020d800148c670c4411ca1e6d87017d5c5336fb341ce9ef3eb88a9e09d9e6",
-        "signature": "2bb38e5e4fa7566b21646534b8d896886ebaf7416b89b5c8ac1824e7e8c60b08",
+        "version": "4170a7dc1ae14840f061a5fa1d2731e13ac74c9b6975d757425bb0786f915300",
+        "signature": "8afaecb47b7b25f5d385fbc819df08f87dff0737ae331213158e8239001a146a",
         "affectsGlobalScope": false
       },
       "../src/books/books.module.ts": {
-        "version": "0c63c7237b48b55ed45d4235408f3421c80e3a8637902b812cd8e69127873038",
+        "version": "10f18cfca760e51f906afd1ae89f605cdcb5681f547c9fbb094ea1b249ad83c8",
         "signature": "41d9207e66987859c5bb8ebc652db3b5bc73822c4eaf2c1daa5b13d7126073b9",
         "affectsGlobalScope": false
       },
@@ -4533,7 +4543,9 @@
         "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/books/books.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/books/books.service.ts",
+        "../src/books/dto/create-book.dto.ts"
       ],
       "../src/books/books.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -4541,7 +4553,8 @@
         "../src/books/books.service.ts"
       ],
       "../src/books/books.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/mocks/books.mocks.ts"
       ],
       "../src/hello/dto/person.dto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -6414,6 +6427,10 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
+      "../src/books/books.controller.ts": [
+        "../src/books/books.service.ts",
+        "../src/books/dto/create-book.dto.ts"
+      ],
       "../src/hello/hello.controller.ts": [
         "../src/hello/dto/person.dto.ts",
         "../src/hello/hello.service.ts"
@@ -6950,11 +6967,13 @@
       "../src/books/books.controller.ts",
       "../src/books/books.module.ts",
       "../src/books/books.service.ts",
+      "../src/books/dto/create-book.dto.ts",
       "../src/hello/dto/person.dto.ts",
       "../src/hello/hello.controller.ts",
       "../src/hello/hello.module.ts",
       "../src/hello/hello.service.ts",
-      "../src/main.ts"
+      "../src/main.ts",
+      "../src/mocks/books.mocks.ts"
     ]
   },
   "version": "4.2.4"
