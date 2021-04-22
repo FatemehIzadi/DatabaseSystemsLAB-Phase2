@@ -21,6 +21,22 @@ class BooksService {
     async getAllBooks() {
         return book_entity_1.default.find();
     }
+    async update(bookID, bookDetails) {
+        const { name, userID, genreIDs } = bookDetails;
+        const book = await book_entity_1.default.findOne({ where: { id: bookID } });
+        book.name = name;
+        book.user = await user_entity_1.default.findOne(userID);
+        book.genres = [];
+        for (let i = 0; i < genreIDs.length; i++) {
+            const genre = await genre_entity_1.default.findOne(genreIDs[i]);
+            book.genres.push(genre);
+        }
+        await book.save();
+        return book;
+    }
+    async delete(bookID) {
+        await book_entity_1.default.delete(bookID);
+    }
 }
 exports.BooksService = BooksService;
 //# sourceMappingURL=books.service.js.map

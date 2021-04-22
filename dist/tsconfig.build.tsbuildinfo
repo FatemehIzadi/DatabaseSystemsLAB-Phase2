@@ -3107,13 +3107,13 @@
         "affectsGlobalScope": false
       },
       "../src/books/books.service.ts": {
-        "version": "dcf437f7847db780b2b4f81ab84e660d478a3ee63b2b0611157e2e3438987af9",
-        "signature": "142ee8ff34ce9cfd5764e472c1382d841b508961481be3dd4db96c1aa81538f9",
+        "version": "5e134bb24e8ef31c51e990cfdb4431600711293a709230215e089c945298bb2e",
+        "signature": "541a6d81adb9953515e29ab2fc1334e53df77f44a35032c6452f4f9a6c3223b9",
         "affectsGlobalScope": false
       },
       "../src/books/books.controller.ts": {
-        "version": "027bde548e83bb8211c05c656b4e004480b40fbde53ee5d1fcd4a6a366a6bf67",
-        "signature": "045cf47899ebdad1efb446b14921d827b7d6d687a7c54401567333e405e1bd68",
+        "version": "b27b2449c3a2a7edf64cfda36e88471ed21b0085170f69a1e906fc3d64f562e6",
+        "signature": "c0a8cb5b53d6725e82279865bb1f405736777952c6537b02915634374f1d9f47",
         "affectsGlobalScope": false
       },
       "../src/books/books.module.ts": {

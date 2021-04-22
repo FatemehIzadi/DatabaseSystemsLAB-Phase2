@@ -26,6 +26,12 @@ let BooksController = class BooksController {
     getAll() {
         return this.booksService.getAllBooks();
     }
+    updateBook(bookID, book) {
+        return this.booksService.update(bookID, book);
+    }
+    deleteBook(bookID) {
+        this.booksService.delete(bookID);
+    }
 };
 __decorate([
     swagger_1.ApiOperation({ description: 'Create book' }),
@@ -44,6 +50,24 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], BooksController.prototype, "getAll", null);
+__decorate([
+    swagger_1.ApiOperation({ description: 'Update book' }),
+    swagger_1.ApiOkResponse({ description: 'Book updated successfully' }),
+    common_1.Put(':bookID'),
+    __param(0, common_1.Param('bookID')), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, create_book_dto_1.default]),
+    __metadata("design:returntype", void 0)
+], BooksController.prototype, "updateBook", null);
+__decorate([
+    swagger_1.ApiOperation({ description: 'Deletebook' }),
+    swagger_1.ApiOkResponse({ description: 'Book deleted successfully' }),
+    common_1.Delete(':bookID'),
+    __param(0, common_1.Param('bookID')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], BooksController.prototype, "deleteBook", null);
 BooksController = __decorate([
     common_1.Controller('books'),
     __metadata("design:paramtypes", [books_service_1.BooksService])
