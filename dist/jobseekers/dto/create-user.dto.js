@@ -9,32 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const typeorm_1 = require("typeorm");
-const book_entity_1 = require("./book.entity");
-let UserEntity = class UserEntity extends typeorm_1.BaseEntity {
-};
+const swagger_1 = require("@nestjs/swagger");
+class CreateUserDto {
+}
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn(),
+    swagger_1.ApiProperty({ type: "string", description: "Username", maxLength: 500 }),
     __metadata("design:type", String)
-], UserEntity.prototype, "username", void 0);
+], CreateUserDto.prototype, "username", void 0);
 __decorate([
-    typeorm_1.Column({ length: 32 }),
+    swagger_1.ApiProperty({ type: "string", description: "email", maxLength: 500 }),
     __metadata("design:type", String)
-], UserEntity.prototype, "password", void 0);
+], CreateUserDto.prototype, "email", void 0);
 __decorate([
-    typeorm_1.Column({ length: 32 }),
+    swagger_1.ApiProperty({ type: "string", description: "password", maxLength: 500 }),
     __metadata("design:type", String)
-], UserEntity.prototype, "email", void 0);
+], CreateUserDto.prototype, "password", void 0);
 __decorate([
-    typeorm_1.Column({ length: 32 }),
+    swagger_1.ApiProperty({ type: "string", description: "phone", maxLength: 500 }),
     __metadata("design:type", String)
-], UserEntity.prototype, "phone", void 0);
-__decorate([
-    typeorm_1.OneToMany(type => book_entity_1.default, book => book.user),
-    __metadata("design:type", Array)
-], UserEntity.prototype, "books", void 0);
-UserEntity = __decorate([
-    typeorm_1.Entity()
-], UserEntity);
-exports.default = UserEntity;
-//# sourceMappingURL=user.entity.js.map
+], CreateUserDto.prototype, "phone", void 0);
+exports.default = CreateUserDto;
+//# sourceMappingURL=create-user.dto.js.map

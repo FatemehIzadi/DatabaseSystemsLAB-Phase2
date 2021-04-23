@@ -3407,8 +3407,8 @@
         "affectsGlobalScope": false
       },
       "../src/db/entity/user.entity.ts": {
-        "version": "cb958ba6acd38dc9752bf3d2311ec27a563b3672a3f88daa0ef98fed0711fbd0",
-        "signature": "b5e83e6664463ce92cef53e4cb5d30da2e9ff5582e2e6b3031643c3ab4fc088e",
+        "version": "69da9e35994c04c69ea2001ff0ce9aaa6380d26548ed8cde5250b1df9f1d5740",
+        "signature": "604db103dff7abcbff5cfe25010c6fd000b945d3f95ebfefa53cbcca2f8bc66b",
         "affectsGlobalScope": false
       },
       "../src/user/dto/create-user.dto.ts": {
@@ -3417,7 +3417,7 @@
         "affectsGlobalScope": false
       },
       "../src/user/user.service.ts": {
-        "version": "13409fe515f8cac4b41951d0353cea7d07a5f8993271bb0fdef3043fe0158ae6",
+        "version": "8a2ae4c358287f86d7ff1b85d01314359ddc281d3965fe6a8e66ab8a221c6d09",
         "signature": "86cbd9b3f4981c5bd4a6fce2bda941cbf37d5eca76fa33859f2dad761900df30",
         "affectsGlobalScope": false
       },
@@ -3764,6 +3764,31 @@
       "../src/auth/auth.module.ts": {
         "version": "cd0866984df8045eddaef1e8ab583352a739c5f5e2975c73b934a63d4dd1d794",
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
+        "affectsGlobalScope": false
+      },
+      "../src/db/entity/offer.entity.ts": {
+        "version": "21c95741d8e548c716cbf81247d9382b97814b38773ad680d3b37f44d0189c08",
+        "signature": "f09d7f8a53ebe7c508aa4537769548fa9101b2439e329d18742e943c79bbf174",
+        "affectsGlobalScope": false
+      },
+      "../src/db/entity/employer.entity.ts": {
+        "version": "47f5c12cfba28c88146890c55d47c05967fe6810081dcacb371da40df1daac3b",
+        "signature": "a5cc595c1a2567c56e00e4c531435345f8812c1ec1b66de0792c6828ec643490",
+        "affectsGlobalScope": false
+      },
+      "../src/db/entity/skill.entity.ts": {
+        "version": "1824859e652e8864d5ad04bc8e1554c0ad36bb8934f230793bfbb50be303cb89",
+        "signature": "cf4d32757c11882a555049c84fe623e086866d1b8aa3c7d905b2f4259646f83c",
+        "affectsGlobalScope": false
+      },
+      "../src/db/entity/resume.entity.ts": {
+        "version": "d80614a79ab857e555b339d3bf7a831f4236be17d62bcf9bbe4e0c3052540792",
+        "signature": "41e0d8a4e97d24ea4c2051248a85aac542bf959fcec41b84ad8cdb863f77ec39",
+        "affectsGlobalScope": false
+      },
+      "../src/db/entity/freelancer.entity.ts": {
+        "version": "467c7be213507c3119b21dee07fed0cd9e47956f3b93b500076ffbc1bb531655",
+        "signature": "a14ae66581d357424d4d9c5ae0a1dd246bbe72a20b5b7d46daa71020adce29c7",
         "affectsGlobalScope": false
       },
       "../node_modules/class-validator/types/validation/ValidationError.d.ts": {
@@ -4409,6 +4434,36 @@
       "../src/hello/hello.module.ts": {
         "version": "a0b0ef69e9442d64db25137c7f8836505f51e0edad59baef7ce8582a17bf1895",
         "signature": "f19e62caaef459d906abf50617132054e2a0d263464e641047cfd160451bb35c",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-user.dto.ts": {
+        "version": "22cce76b611b37919488f96aeffcf7fdc46980240e397fe560396034b9b7c28a",
+        "signature": "da083c2741c24e5b519f4da4241bf13cc2af113633992465f4cd64d020714755",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-employer.dto.ts": {
+        "version": "e6daccc87e2f8da80dbe4cbf9ae34a303cb7f3a7bfb5729073bfc46bc4e1ae07",
+        "signature": "a7b4e4c7c80889980db0f2647fb97010e122d1ee50815a8940e204bd0b8a83e1",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-freelancer.dto.ts": {
+        "version": "aba5f3a4eeb4389f21a107cb3e2ac5d956cd77c0d92e345944b1c563cd37d571",
+        "signature": "a07058401cf77fc66500357bc01e56350154f6575b0db8f20579eeb27e683573",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-offer.dto.ts": {
+        "version": "c9773dd5b3a8da12ff0d18c339443fd95e3f4ee34165312cf75ff9a68599679e",
+        "signature": "8751abdcc7a189a53ced4731690c32b6567d08782e4d0ea07aca9dd4137f99ee",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-resume.dto.ts": {
+        "version": "3d02de8bb0f7a259c92ae69c3e434e635c43897209c4f82ee29cf647d20e4020",
+        "signature": "9a01a5e157783584fcd846fa7c511ba4300b5f8245e1ab5830ac8d21be96ec13",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/dto/create-skill.dto.ts": {
+        "version": "027f7aa9a1cb51ee968f3506b1c0dbdaf060cefeb5660fc42e3462009572b3c6",
+        "signature": "c3eb98ba97d2483703e3a2c4bf84fa7132f5a6a9e9c81ddb2cb097adb3736706",
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
@@ -7894,8 +7949,32 @@
         "../src/db/entity/genre.entity.ts",
         "../src/db/entity/user.entity.ts"
       ],
+      "../src/db/entity/employer.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/offer.entity.ts",
+        "../src/db/entity/user.entity.ts"
+      ],
+      "../src/db/entity/freelancer.entity.ts": [
+        "../node_modules/@types/node/os.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/resume.entity.ts",
+        "../src/db/entity/skill.entity.ts",
+        "../src/db/entity/user.entity.ts"
+      ],
       "../src/db/entity/genre.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/db/entity/offer.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/employer.entity.ts"
+      ],
+      "../src/db/entity/resume.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/freelancer.entity.ts"
+      ],
+      "../src/db/entity/skill.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/freelancer.entity.ts"
       ],
       "../src/db/entity/user.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -7938,6 +8017,26 @@
       "../src/hello/hello.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/hello/dto/person.dto.ts"
+      ],
+      "../src/jobseekers/dto/create-employer.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../src/jobseekers/dto/create-user.dto.ts"
+      ],
+      "../src/jobseekers/dto/create-freelancer.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../src/jobseekers/dto/create-user.dto.ts"
+      ],
+      "../src/jobseekers/dto/create-offer.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts"
+      ],
+      "../src/jobseekers/dto/create-resume.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts"
+      ],
+      "../src/jobseekers/dto/create-skill.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts"
+      ],
+      "../src/jobseekers/dto/create-user.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts"
       ],
       "../src/jobseekers/jobseekers.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -11216,8 +11315,29 @@
         "../src/db/entity/genre.entity.ts",
         "../src/db/entity/user.entity.ts"
       ],
+      "../src/db/entity/employer.entity.ts": [
+        "../src/db/entity/offer.entity.ts",
+        "../src/db/entity/user.entity.ts"
+      ],
+      "../src/db/entity/freelancer.entity.ts": [
+        "../src/db/entity/resume.entity.ts",
+        "../src/db/entity/skill.entity.ts",
+        "../src/db/entity/user.entity.ts"
+      ],
       "../src/db/entity/genre.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/db/entity/offer.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/employer.entity.ts"
+      ],
+      "../src/db/entity/resume.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/freelancer.entity.ts"
+      ],
+      "../src/db/entity/skill.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/db/entity/freelancer.entity.ts"
       ],
       "../src/db/entity/user.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -11238,6 +11358,12 @@
       ],
       "../src/hello/hello.service.ts": [
         "../src/hello/dto/person.dto.ts"
+      ],
+      "../src/jobseekers/dto/create-employer.dto.ts": [
+        "../src/jobseekers/dto/create-user.dto.ts"
+      ],
+      "../src/jobseekers/dto/create-freelancer.dto.ts": [
+        "../src/jobseekers/dto/create-user.dto.ts"
       ],
       "../src/user/user.controller.ts": [
         "../src/db/entity/book.entity.ts",
@@ -12151,7 +12277,12 @@
       "../src/books/books.service.ts",
       "../src/books/dto/create-book.dto.ts",
       "../src/db/entity/book.entity.ts",
+      "../src/db/entity/employer.entity.ts",
+      "../src/db/entity/freelancer.entity.ts",
       "../src/db/entity/genre.entity.ts",
+      "../src/db/entity/offer.entity.ts",
+      "../src/db/entity/resume.entity.ts",
+      "../src/db/entity/skill.entity.ts",
       "../src/db/entity/user.entity.ts",
       "../src/genre/dto/create-genre.dto.ts",
       "../src/genre/genre.controller.ts",
@@ -12161,6 +12292,12 @@
       "../src/hello/hello.controller.ts",
       "../src/hello/hello.module.ts",
       "../src/hello/hello.service.ts",
+      "../src/jobseekers/dto/create-employer.dto.ts",
+      "../src/jobseekers/dto/create-freelancer.dto.ts",
+      "../src/jobseekers/dto/create-offer.dto.ts",
+      "../src/jobseekers/dto/create-resume.dto.ts",
+      "../src/jobseekers/dto/create-skill.dto.ts",
+      "../src/jobseekers/dto/create-user.dto.ts",
       "../src/jobseekers/jobseekers.controller.ts",
       "../src/jobseekers/jobseekers.module.ts",
       "../src/jobseekers/jobseekers.service.ts",

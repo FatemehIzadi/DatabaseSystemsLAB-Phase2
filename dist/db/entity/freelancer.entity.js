@@ -10,31 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const book_entity_1 = require("./book.entity");
-let UserEntity = class UserEntity extends typeorm_1.BaseEntity {
+const skill_entity_1 = require("./skill.entity");
+const user_entity_1 = require("./user.entity");
+const resume_entity_1 = require("./resume.entity");
+let FreelancerEntity = class FreelancerEntity extends user_entity_1.default {
 };
 __decorate([
-    typeorm_1.PrimaryGeneratedColumn(),
+    typeorm_1.Column({ length: 16 }),
     __metadata("design:type", String)
-], UserEntity.prototype, "username", void 0);
+], FreelancerEntity.prototype, "cardNum", void 0);
 __decorate([
-    typeorm_1.Column({ length: 32 }),
-    __metadata("design:type", String)
-], UserEntity.prototype, "password", void 0);
-__decorate([
-    typeorm_1.Column({ length: 32 }),
-    __metadata("design:type", String)
-], UserEntity.prototype, "email", void 0);
-__decorate([
-    typeorm_1.Column({ length: 32 }),
-    __metadata("design:type", String)
-], UserEntity.prototype, "phone", void 0);
-__decorate([
-    typeorm_1.OneToMany(type => book_entity_1.default, book => book.user),
+    typeorm_1.OneToMany(type => skill_entity_1.default, skill => skill.freelancerID),
     __metadata("design:type", Array)
-], UserEntity.prototype, "books", void 0);
-UserEntity = __decorate([
+], FreelancerEntity.prototype, "skills", void 0);
+__decorate([
+    typeorm_1.OneToOne(type => resume_entity_1.default, resume => resume.freelancerID),
+    __metadata("design:type", resume_entity_1.default)
+], FreelancerEntity.prototype, "resume", void 0);
+FreelancerEntity = __decorate([
     typeorm_1.Entity()
-], UserEntity);
-exports.default = UserEntity;
-//# sourceMappingURL=user.entity.js.map
+], FreelancerEntity);
+exports.default = FreelancerEntity;
+//# sourceMappingURL=freelancer.entity.js.map

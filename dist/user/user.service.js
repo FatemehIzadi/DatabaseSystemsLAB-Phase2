@@ -13,7 +13,7 @@ let UserService = class UserService {
     async insert(userDetails) {
         const userEntity = user_entity_1.default.create();
         const { name } = userDetails;
-        userEntity.name = name;
+        userEntity.username = name;
         await user_entity_1.default.save(userEntity);
         return userEntity;
     }

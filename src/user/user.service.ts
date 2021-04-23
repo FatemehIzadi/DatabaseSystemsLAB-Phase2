@@ -10,7 +10,7 @@ export class UserService {
     async insert(userDetails: CreateUserDto): Promise<UserEntity> {
         const userEntity: UserEntity = UserEntity.create();
         const { name } = userDetails;
-        userEntity.name = name;
+        userEntity.username = name;
         await UserEntity.save(userEntity);
         return userEntity;
     }
