@@ -3101,6 +3101,21 @@
         "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
         "affectsGlobalScope": false
       },
+      "../src/jobseekers/jobseekers.service.ts": {
+        "version": "96f43756d84b05fd55c08612edf54e496ffc2907850cf122bd61247908f31149",
+        "signature": "ab043d29a78b91073cb3d44c88dc7ce73908806ef27f30909a2218cc576b6c57",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/jobseekers.controller.ts": {
+        "version": "7d1b9c92bcf48e0089eaa295a25ef3363255c1cb1d4e81a8f94bec0b998e404b",
+        "signature": "6f24bfa750fb2b568e89acf235163266693dceabc9a82479a7351b41dfd69c55",
+        "affectsGlobalScope": false
+      },
+      "../src/jobseekers/jobseekers.module.ts": {
+        "version": "5534beeed258c39104eaf94ca396f2731307dc7c09092a83bce6ebf082a53c03",
+        "signature": "21d6b3fc063e65066d7a68b7c38ede3dd3f8b49ae8aa59b1b5f4e38f60376ad3",
+        "affectsGlobalScope": false
+      },
       "../src/books/dto/create-book.dto.ts": {
         "version": "3df7ee7aa34ddcdcd3ebc91e473f08473fdf6c07e744ad3315e81e348e038d9d",
         "signature": "b3863a0ae18c8bd32d8de5f11541cedc4782e1e4457ed9484b618a845b3e0c26",
@@ -3142,7 +3157,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "f31dca3f91fa9f63a0c71bd26cd7e4c918cbb9fef4ff368d266d2a7b38b231cb",
+        "version": "ac6018cd82a6e40a5853f9df1a65afbac4ca84d926bd4915a50d242f07a991a2",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -7800,6 +7815,7 @@
         "../src/db/entity/genre.entity.ts",
         "../src/db/entity/user.entity.ts",
         "../src/genre/genre.module.ts",
+        "../src/jobseekers/jobseekers.module.ts",
         "../src/user/user.module.ts"
       ],
       "../src/app.service.ts": [
@@ -7920,6 +7936,17 @@
       "../src/hello/hello.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/hello/dto/person.dto.ts"
+      ],
+      "../src/jobseekers/jobseekers.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/jobseekers/jobseekers.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/jobseekers/jobseekers.controller.ts",
+        "../src/jobseekers/jobseekers.service.ts"
+      ],
+      "../src/jobseekers/jobseekers.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/main.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -12132,6 +12159,9 @@
       "../src/hello/hello.controller.ts",
       "../src/hello/hello.module.ts",
       "../src/hello/hello.service.ts",
+      "../src/jobseekers/jobseekers.controller.ts",
+      "../src/jobseekers/jobseekers.module.ts",
+      "../src/jobseekers/jobseekers.service.ts",
       "../src/main.ts",
       "../src/user/dto/create-user.dto.ts",
       "../src/user/user.controller.ts",
