@@ -20,7 +20,7 @@ __decorate([
 __decorate([
     typeorm_1.Column({ length: 500 }),
     __metadata("design:type", String)
-], SkillEntity.prototype, "name", void 0);
+], SkillEntity.prototype, "descr", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", Number)

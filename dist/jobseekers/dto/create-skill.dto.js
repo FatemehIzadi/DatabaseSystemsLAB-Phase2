@@ -17,11 +17,7 @@ __decorate([
     __metadata("design:type", Number)
 ], CreateSkillDto.prototype, "skillID", void 0);
 __decorate([
-    swagger_1.ApiProperty({ type: "number", description: "Freelancer ID" }),
-    __metadata("design:type", Number)
-], CreateSkillDto.prototype, "freelancerID", void 0);
-__decorate([
-    swagger_1.ApiProperty({ type: "string", description: "Skill name" }),
+    swagger_1.ApiProperty({ type: "string", description: "Skill description" }),
     __metadata("design:type", String)
 ], CreateSkillDto.prototype, "descr", void 0);
 __decorate([

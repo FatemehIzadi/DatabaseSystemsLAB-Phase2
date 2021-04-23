@@ -21,10 +21,6 @@ __decorate([
     __metadata("design:type", String)
 ], CreateUserDto.prototype, "email", void 0);
 __decorate([
-    swagger_1.ApiProperty({ type: "string", description: "password", maxLength: 500 }),
-    __metadata("design:type", String)
-], CreateUserDto.prototype, "password", void 0);
-__decorate([
     swagger_1.ApiProperty({ type: "string", description: "phone", maxLength: 500 }),
     __metadata("design:type", String)
 ], CreateUserDto.prototype, "phone", void 0);

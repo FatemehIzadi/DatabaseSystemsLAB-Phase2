@@ -8,7 +8,7 @@ export default class SkillEntity extends BaseEntity {
     skillID: number;
 
     @Column({ length: 500 })
-    name: string;
+    descr: string;
 
     @Column()
     level: number;

@@ -16,11 +16,11 @@ let ResumeEntity = class ResumeEntity extends typeorm_1.BaseEntity {
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
-], ResumeEntity.prototype, "ResumeID", void 0);
+], ResumeEntity.prototype, "resumeID", void 0);
 __decorate([
     typeorm_1.Column({ length: 500 }),
     __metadata("design:type", String)
-], ResumeEntity.prototype, "description", void 0);
+], ResumeEntity.prototype, "descr", void 0);
 __decorate([
     typeorm_1.OneToOne(type => freelancer_entity_1.default, freelancer => freelancer.resume),
     __metadata("design:type", freelancer_entity_1.default)

@@ -17,10 +17,6 @@ __decorate([
     __metadata("design:type", Number)
 ], CreateOrderDto.prototype, "offerID", void 0);
 __decorate([
-    swagger_1.ApiProperty({ type: "number", description: "Employer ID" }),
-    __metadata("design:type", Number)
-], CreateOrderDto.prototype, "employerID", void 0);
-__decorate([
     swagger_1.ApiProperty({ type: "number", description: "Offer income" }),
     __metadata("design:type", Number)
 ], CreateOrderDto.prototype, "income", void 0);
@@ -33,8 +29,8 @@ __decorate([
     __metadata("design:type", Number)
 ], CreateOrderDto.prototype, "minExp", void 0);
 __decorate([
-    swagger_1.ApiProperty({ type: "number", description: "Offer category" }),
-    __metadata("design:type", Number)
+    swagger_1.ApiProperty({ type: "string", description: "Offer category" }),
+    __metadata("design:type", String)
 ], CreateOrderDto.prototype, "category", void 0);
 __decorate([
     swagger_1.ApiProperty({ type: "number", description: "Offer priority" }),

@@ -5,10 +5,10 @@ import FreelancerEntity from './freelancer.entity';
 export default class ResumeEntity extends BaseEntity {
 
     @PrimaryGeneratedColumn()
-    ResumeID: number;
+    resumeID: number;
 
     @Column({ length: 500 })
-    description: string;
+    descr: string;
 
     @OneToOne(type => FreelancerEntity, freelancer => freelancer.resume)
     freelancerID: FreelancerEntity;

@@ -17,12 +17,8 @@ __decorate([
     __metadata("design:type", Number)
 ], CreateResumeDto.prototype, "resumeID", void 0);
 __decorate([
-    swagger_1.ApiProperty({ type: "number", description: "Freelancer ID" }),
-    __metadata("design:type", Number)
-], CreateResumeDto.prototype, "freelancerID", void 0);
-__decorate([
     swagger_1.ApiProperty({ type: "string", description: "Resume description" }),
     __metadata("design:type", String)
-], CreateResumeDto.prototype, "description", void 0);
+], CreateResumeDto.prototype, "descr", void 0);
 exports.default = CreateResumeDto;
 //# sourceMappingURL=create-resume.dto.js.map
