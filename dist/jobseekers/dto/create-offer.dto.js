@@ -25,6 +25,10 @@ __decorate([
     __metadata("design:type", Number)
 ], CreateOfferDto.prototype, "minExp", void 0);
 __decorate([
+    swagger_1.ApiProperty({ type: "string", description: "Offer description" }),
+    __metadata("design:type", String)
+], CreateOfferDto.prototype, "descr", void 0);
+__decorate([
     swagger_1.ApiProperty({ type: "string", description: "Offer category" }),
     __metadata("design:type", String)
 ], CreateOfferDto.prototype, "category", void 0);

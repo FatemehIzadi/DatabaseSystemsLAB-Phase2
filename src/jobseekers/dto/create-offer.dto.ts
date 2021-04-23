@@ -11,6 +11,9 @@ export default class CreateOfferDto {
     @ApiProperty({type: "number", description:"Offer minimum experience"})
     readonly minExp: number;
 
+    @ApiProperty({type: "string", description:"Offer description"})
+    readonly descr: string;
+
     @ApiProperty({type: "string", description:"Offer category"})
     readonly category: string;
 
