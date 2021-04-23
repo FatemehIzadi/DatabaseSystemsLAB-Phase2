@@ -20,7 +20,7 @@ __decorate([
     __metadata("design:type", String)
 ], FreelancerEntity.prototype, "cardNum", void 0);
 __decorate([
-    typeorm_1.OneToMany(type => skill_entity_1.default, skill => skill.freelancerID),
+    typeorm_1.OneToMany(type => skill_entity_1.default, skill => skill.freelancer),
     __metadata("design:type", Array)
 ], FreelancerEntity.prototype, "skills", void 0);
 __decorate([

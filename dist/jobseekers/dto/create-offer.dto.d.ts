@@ -1,4 +1,5 @@
 export default class CreateOfferDto {
+    readonly employerID: number;
     readonly income: number;
     readonly deadline: Date;
     readonly minExp: number;

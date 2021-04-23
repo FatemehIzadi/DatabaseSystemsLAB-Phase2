@@ -16,6 +16,6 @@ export default class SkillEntity extends BaseEntity {
     @Column()
     level: number;
 
-    @ManyToOne(type => FreelancerEntity, freelancer => freelancer.skills)
-    freelancerID: FreelancerEntity;
+    @ManyToOne(type => FreelancerEntity, freelancer => freelancer.skills, { cascade: true, onDelete: 'CASCADE' })
+    freelancer: FreelancerEntity;
 }

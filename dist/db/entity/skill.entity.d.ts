@@ -5,5 +5,5 @@ export default class SkillEntity extends BaseEntity {
     category: string;
     descr: string;
     level: number;
-    freelancerID: FreelancerEntity;
+    freelancer: FreelancerEntity;
 }

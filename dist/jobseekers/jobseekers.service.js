@@ -34,20 +34,18 @@ let JobseekersService = class JobseekersService {
         await freelancer_entity_1.default.save(freelancerEntity);
         return freelancerEntity;
     }
-    async insertSkill(skillDetails, freelancerID) {
+    async insertSkill(skillDetails) {
         const skillEntity = skill_entity_1.default.create();
         const { category, descr, level } = skillDetails;
         skillEntity.category = category;
-        skillEntity.freelancerID = await freelancer_entity_1.default.findOne(freelancerID);
         skillEntity.descr = descr;
         skillEntity.level = level;
         await skill_entity_1.default.save(skillEntity);
         return skillEntity;
     }
-    async insertOffer(offerDetails, employerID) {
+    async insertOffer(offerDetails) {
         const offerEntity = offer_entity_1.default.create();
         const { income, deadline, priority, category, minExp, descr } = offerDetails;
-        offerEntity.employerID = await employer_entity_1.default.findOne(employerID);
         offerEntity.income = income;
         offerEntity.deadline = deadline;
         offerEntity.priority = priority;
@@ -72,8 +70,8 @@ let JobseekersService = class JobseekersService {
         await employer.save();
         return employer;
     }
-    async deleteEmployer(userID) {
-        const employer = await employer_entity_1.default.findOne(userID);
+    async deleteEmployer(employerID) {
+        const employer = await employer_entity_1.default.findOne(employerID);
         await employer.remove();
         return employer;
     }
@@ -85,8 +83,8 @@ let JobseekersService = class JobseekersService {
         await freelancer.save();
         return freelancer;
     }
-    async deleteFreelancer(userID) {
-        const freelancer = await freelancer_entity_1.default.findOne(userID);
+    async deleteFreelancer(freelancerID) {
+        const freelancer = await freelancer_entity_1.default.findOne(freelancerID);
         await freelancer.remove();
         return freelancer;
     }
@@ -99,8 +97,8 @@ let JobseekersService = class JobseekersService {
         await skillEntity.save();
         return skillEntity;
     }
-    async deleteSkill(skillId) {
-        const skillEntity = await skill_entity_1.default.findOne(skillId);
+    async deleteSkill(skillID) {
+        const skillEntity = await skill_entity_1.default.findOne(skillID);
         await skillEntity.remove();
         return skillEntity;
     }
@@ -115,10 +113,22 @@ let JobseekersService = class JobseekersService {
         await offerEntity.save();
         return offerEntity;
     }
-    async deleteOffer(offerId) {
-        const offerEntity = await offer_entity_1.default.findOne(offerId);
+    async deleteOffer(offerID) {
+        const offerEntity = await offer_entity_1.default.findOne(offerID);
         await offerEntity.remove();
         return offerEntity;
+    }
+    async getAllEmployers() {
+        return employer_entity_1.default.find();
+    }
+    async getAllFreelancers() {
+        return freelancer_entity_1.default.find();
+    }
+    async getAllSkills() {
+        return skill_entity_1.default.find();
+    }
+    async getAllOffers() {
+        return offer_entity_1.default.find();
     }
 };
 JobseekersService = __decorate([

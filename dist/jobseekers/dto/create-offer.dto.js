@@ -13,6 +13,10 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateOfferDto {
 }
 __decorate([
+    swagger_1.ApiProperty({ type: "number", description: "Employer ID" }),
+    __metadata("design:type", Number)
+], CreateOfferDto.prototype, "employerID", void 0);
+__decorate([
     swagger_1.ApiProperty({ type: "number", description: "Offer income" }),
     __metadata("design:type", Number)
 ], CreateOfferDto.prototype, "income", void 0);

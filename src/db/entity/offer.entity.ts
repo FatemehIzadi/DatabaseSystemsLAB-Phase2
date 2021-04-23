@@ -8,7 +8,7 @@ export default class OfferEntity extends BaseEntity {
     offerID: number;
 
     @Column({ length: 500 })
-    descr: string;
+    description: string;
 
     @Column({ length: 500 })
     category: string;

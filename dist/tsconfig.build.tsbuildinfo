@@ -3472,8 +3472,8 @@
         "affectsGlobalScope": false
       },
       "../src/db/entity/offer.entity.ts": {
-        "version": "9f1c6d4aa312a17241a8cfdc7101b397e1a422781c7dee0a5abd7a858a94c5ba",
-        "signature": "d35b0b18b6ad823503c272fbbd231cadda0ae42c4cfdef62f02e24810b4cff23",
+        "version": "21c95741d8e548c716cbf81247d9382b97814b38773ad680d3b37f44d0189c08",
+        "signature": "f09d7f8a53ebe7c508aa4537769548fa9101b2439e329d18742e943c79bbf174",
         "affectsGlobalScope": false
       },
       "../src/db/entity/employer.entity.ts": {
@@ -3482,8 +3482,8 @@
         "affectsGlobalScope": false
       },
       "../src/db/entity/skill.entity.ts": {
-        "version": "77410fdb94a4592d928a84d5ecc09c99d4cc3510f7fe549a1af71d61b684af3a",
-        "signature": "da379ac7c24bc6ba8af699a3be4838abab7c11093019052d9645e0117b42ec73",
+        "version": "eda11d1606d8800354cbd00ba0edc3133ad71180644345886bffb743ee9f22a3",
+        "signature": "45c77835fa8ea4e5ab40bf5c40d21e9375bc4b358e519a07b4d98e0ffbddf678",
         "affectsGlobalScope": false
       },
       "../src/db/entity/resume.entity.ts": {
@@ -3492,7 +3492,7 @@
         "affectsGlobalScope": false
       },
       "../src/db/entity/freelancer.entity.ts": {
-        "version": "467c7be213507c3119b21dee07fed0cd9e47956f3b93b500076ffbc1bb531655",
+        "version": "46f69c74225383e3cd360c606a3ea47418eb1c764d8cbac1b3365c4f922b5e31",
         "signature": "a14ae66581d357424d4d9c5ae0a1dd246bbe72a20b5b7d46daa71020adce29c7",
         "affectsGlobalScope": false
       },
@@ -3517,8 +3517,8 @@
         "affectsGlobalScope": false
       },
       "../src/jobseekers/dto/create-offer.dto.ts": {
-        "version": "a576a42630e162cad31479c3e8269f9110e883bb36c4419ba0e6a3553b14090d",
-        "signature": "ed54b6a3d42e27b3dfd6321f45f3fe8433026bd0d1c4d2d7fff8fdd96fc82140",
+        "version": "76b70097481c01555a17e17e57fb078068efea3935418c2327c95a02a41a4178",
+        "signature": "932d2a8408128b4b65963f3886b4d0bfffffdf61d4671b49d598a7f49495589f",
         "affectsGlobalScope": false
       },
       "../src/jobseekers/dto/create-resume.dto.ts": {
@@ -3547,13 +3547,13 @@
         "affectsGlobalScope": false
       },
       "../src/jobseekers/jobseekers.service.ts": {
-        "version": "71e42e5fa97ac1ec87beb232cb8d38ad977d653596614fc679272b59bdbae581",
-        "signature": "0ccea678cbe9644525c1d151e87f78caf82cb8d2a759c5f69de12e273e7cff96",
+        "version": "09d049b20d8c1d0effd9b59360defbdb19a216f1cd432e63c3261094e45acaa7",
+        "signature": "2e4f8b5aa85a74e45015d33a980d8bbd6451ea06e8b583adde3c689532ecfd33",
         "affectsGlobalScope": false
       },
       "../src/jobseekers/jobseekers.controller.ts": {
-        "version": "7d1b9c92bcf48e0089eaa295a25ef3363255c1cb1d4e81a8f94bec0b998e404b",
-        "signature": "6f24bfa750fb2b568e89acf235163266693dceabc9a82479a7351b41dfd69c55",
+        "version": "ce693b1f037230e111859f87ccece2e8f1d471eb7f1a61dc9d893d4dc2a8287b",
+        "signature": "936e8e9274f42b50abd720a85395d4583a4adbeebdf8864071649526f370e1ee",
         "affectsGlobalScope": false
       },
       "../src/jobseekers/jobseekers.module.ts": {
@@ -8094,7 +8094,17 @@
         "../src/jobseekers/dto/create-user.dto.ts"
       ],
       "../src/jobseekers/jobseekers.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../src/jobseekers/dto/create-employer.dto.ts",
+        "../src/jobseekers/dto/create-freelancer.dto.ts",
+        "../src/jobseekers/dto/create-offer.dto.ts",
+        "../src/jobseekers/dto/create-skill.dto.ts",
+        "../src/jobseekers/dto/update-employer.dto.ts",
+        "../src/jobseekers/dto/update-freelancer.dto.ts",
+        "../src/jobseekers/dto/update-offer.dto.ts",
+        "../src/jobseekers/dto/update-skill.dto.ts",
+        "../src/jobseekers/jobseekers.service.ts"
       ],
       "../src/jobseekers/jobseekers.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -11451,6 +11461,21 @@
       ],
       "../src/jobseekers/dto/update-user.dto.ts": [
         "../src/jobseekers/dto/create-user.dto.ts"
+      ],
+      "../src/jobseekers/jobseekers.controller.ts": [
+        "../src/db/entity/employer.entity.ts",
+        "../src/db/entity/freelancer.entity.ts",
+        "../src/db/entity/offer.entity.ts",
+        "../src/db/entity/skill.entity.ts",
+        "../src/jobseekers/dto/create-employer.dto.ts",
+        "../src/jobseekers/dto/create-freelancer.dto.ts",
+        "../src/jobseekers/dto/create-offer.dto.ts",
+        "../src/jobseekers/dto/create-skill.dto.ts",
+        "../src/jobseekers/dto/update-employer.dto.ts",
+        "../src/jobseekers/dto/update-freelancer.dto.ts",
+        "../src/jobseekers/dto/update-offer.dto.ts",
+        "../src/jobseekers/dto/update-skill.dto.ts",
+        "../src/jobseekers/jobseekers.service.ts"
       ],
       "../src/jobseekers/jobseekers.service.ts": [
         "../src/db/entity/employer.entity.ts",

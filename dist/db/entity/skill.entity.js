@@ -30,9 +30,9 @@ __decorate([
     __metadata("design:type", Number)
 ], SkillEntity.prototype, "level", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => freelancer_entity_1.default, freelancer => freelancer.skills),
+    typeorm_1.ManyToOne(type => freelancer_entity_1.default, freelancer => freelancer.skills, { cascade: true, onDelete: 'CASCADE' }),
     __metadata("design:type", freelancer_entity_1.default)
-], SkillEntity.prototype, "freelancerID", void 0);
+], SkillEntity.prototype, "freelancer", void 0);
 SkillEntity = __decorate([
     typeorm_1.Entity()
 ], SkillEntity);

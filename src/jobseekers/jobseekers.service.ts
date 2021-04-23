@@ -36,20 +36,18 @@ export class JobseekersService {
     await FreelancerEntity.save(freelancerEntity);
     return freelancerEntity;
   }
-  async insertSkill(skillDetails: CreateSkillDto, freelancerID: number): Promise<SkillEntity> {
+  async insertSkill(skillDetails: CreateSkillDto): Promise<SkillEntity> {
     const skillEntity:SkillEntity = SkillEntity.create();
     const {category, descr, level} = skillDetails;
     skillEntity.category = category;
-    skillEntity.freelancerID = await FreelancerEntity.findOne(freelancerID);
     skillEntity.descr = descr;
     skillEntity.level = level;
     await SkillEntity.save(skillEntity);
     return skillEntity;
   }
-  async insertOffer(offerDetails: CreateOfferDto, employerID: number): Promise<OfferEntity> {
+  async insertOffer(offerDetails: CreateOfferDto): Promise<OfferEntity> {
     const offerEntity: OfferEntity = OfferEntity.create();
     const {income, deadline, priority, category, minExp, descr} = offerDetails;
-    offerEntity.employerID = await EmployerEntity.findOne(employerID);
     offerEntity.income = income;
     offerEntity.deadline = deadline;
     offerEntity.priority = priority;
@@ -77,8 +75,8 @@ export class JobseekersService {
     return employer;
   }
  
-  async deleteEmployer(userID: number): Promise<EmployerEntity> {
-    const employer = await EmployerEntity.findOne(userID);
+  async deleteEmployer(employerID: number): Promise<EmployerEntity> {
+    const employer = await EmployerEntity.findOne(employerID);
     await employer.remove();
     return employer;
   }
@@ -92,11 +90,12 @@ export class JobseekersService {
     return freelancer;
   }
  
-  async deleteFreelancer(userID: number): Promise<FreelancerEntity> {
-    const freelancer = await FreelancerEntity.findOne(userID);
+  async deleteFreelancer(freelancerID: number): Promise<FreelancerEntity> {
+    const freelancer = await FreelancerEntity.findOne(freelancerID);
     await freelancer.remove();
     return freelancer;
   } 
+
   async updateSkill(skillDetails: UpdateSkillDto): Promise<SkillEntity> {
     const {skillID, category, descr, level} = skillDetails;
     const skillEntity = await SkillEntity.findOne(skillID);
@@ -106,12 +105,12 @@ export class JobseekersService {
     await skillEntity.save();
     return skillEntity;
   }
-  async deleteSkill(skillId: number): Promise<SkillEntity> {
-    const skillEntity = await SkillEntity.findOne(skillId);
+
+  async deleteSkill(skillID: number): Promise<SkillEntity> {
+    const skillEntity = await SkillEntity.findOne(skillID);
     await skillEntity.remove();
     return skillEntity;
   }
-
 
   async updateOffer(offerDetails: UpdateOfferDto): Promise<OfferEntity> {
     const {offerID, income, deadline, priority, category, minExp, descr} = offerDetails;
@@ -124,9 +123,26 @@ export class JobseekersService {
     await offerEntity.save();
     return offerEntity;
   }
-  async deleteOffer(offerId: number): Promise<OfferEntity> {
-    const offerEntity = await OfferEntity.findOne(offerId);
+
+  async deleteOffer(offerID: number): Promise<OfferEntity> {
+    const offerEntity = await OfferEntity.findOne(offerID);
     await offerEntity.remove();
     return offerEntity;
+  }
+
+  async getAllEmployers(): Promise<EmployerEntity[] > {
+    return EmployerEntity.find();
+  }
+
+  async getAllFreelancers(): Promise<FreelancerEntity[] > {
+    return FreelancerEntity.find();
+  }
+
+  async getAllSkills(): Promise<SkillEntity[] > {
+    return SkillEntity.find();
+  }
+  
+  async getAllOffers(): Promise<OfferEntity[] > {
+    return OfferEntity.find();
   }
 }

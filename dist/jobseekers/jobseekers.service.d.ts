@@ -15,15 +15,19 @@ import UpdateSkillDto from './dto/update-skill.dto';
 export declare class JobseekersService {
     insertEmployer(employerDetails: CreateEmployerDto): Promise<EmployerEntity>;
     insertFreelancer(freelancerDetails: CreateFreelancerDto): Promise<FreelancerEntity>;
-    insertSkill(skillDetails: CreateSkillDto, freelancerID: number): Promise<SkillEntity>;
-    insertOffer(offerDetails: CreateOfferDto, employerID: number): Promise<OfferEntity>;
+    insertSkill(skillDetails: CreateSkillDto): Promise<SkillEntity>;
+    insertOffer(offerDetails: CreateOfferDto): Promise<OfferEntity>;
     insertResume(ResumeDetails: CreateResumeDto, freelancerID: number): Promise<ResumeEntity>;
     updateEmployer(employerDetails: UpdateEmployerDto): Promise<EmployerEntity>;
-    deleteEmployer(userID: number): Promise<EmployerEntity>;
+    deleteEmployer(employerID: number): Promise<EmployerEntity>;
     updateFreelancer(freelancerDetails: UpdateFreelancerDto): Promise<FreelancerEntity>;
-    deleteFreelancer(userID: number): Promise<FreelancerEntity>;
+    deleteFreelancer(freelancerID: number): Promise<FreelancerEntity>;
     updateSkill(skillDetails: UpdateSkillDto): Promise<SkillEntity>;
-    deleteSkill(skillId: number): Promise<SkillEntity>;
+    deleteSkill(skillID: number): Promise<SkillEntity>;
     updateOffer(offerDetails: UpdateOfferDto): Promise<OfferEntity>;
-    deleteOffer(offerId: number): Promise<OfferEntity>;
+    deleteOffer(offerID: number): Promise<OfferEntity>;
+    getAllEmployers(): Promise<EmployerEntity[]>;
+    getAllFreelancers(): Promise<FreelancerEntity[]>;
+    getAllSkills(): Promise<SkillEntity[]>;
+    getAllOffers(): Promise<OfferEntity[]>;
 }
