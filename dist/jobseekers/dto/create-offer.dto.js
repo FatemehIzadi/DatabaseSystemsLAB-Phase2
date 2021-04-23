@@ -10,27 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const swagger_1 = require("@nestjs/swagger");
-class CreateOrderDto {
+class CreateOfferDto {
 }
 __decorate([
     swagger_1.ApiProperty({ type: "number", description: "Offer income" }),
     __metadata("design:type", Number)
-], CreateOrderDto.prototype, "income", void 0);
+], CreateOfferDto.prototype, "income", void 0);
 __decorate([
     swagger_1.ApiProperty({ type: "Date", description: "Offer deadline" }),
     __metadata("design:type", Date)
-], CreateOrderDto.prototype, "deadline", void 0);
+], CreateOfferDto.prototype, "deadline", void 0);
 __decorate([
     swagger_1.ApiProperty({ type: "number", description: "Offer minimum experience" }),
     __metadata("design:type", Number)
-], CreateOrderDto.prototype, "minExp", void 0);
+], CreateOfferDto.prototype, "minExp", void 0);
 __decorate([
     swagger_1.ApiProperty({ type: "string", description: "Offer category" }),
     __metadata("design:type", String)
-], CreateOrderDto.prototype, "category", void 0);
+], CreateOfferDto.prototype, "category", void 0);
 __decorate([
     swagger_1.ApiProperty({ type: "number", description: "Offer priority" }),
     __metadata("design:type", Number)
-], CreateOrderDto.prototype, "priority", void 0);
-exports.default = CreateOrderDto;
+], CreateOfferDto.prototype, "priority", void 0);
+exports.default = CreateOfferDto;
 //# sourceMappingURL=create-offer.dto.js.map

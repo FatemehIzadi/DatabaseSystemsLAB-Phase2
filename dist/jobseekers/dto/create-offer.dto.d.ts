@@ -1,4 +1,4 @@
-export default class CreateOrderDto {
+export default class CreateOfferDto {
     readonly income: number;
     readonly deadline: Date;
     readonly minExp: number;

@@ -10,12 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const swagger_1 = require("@nestjs/swagger");
-const create_resume_dto_1 = require("./create-resume.dto");
-class UpdateResumeDto extends create_resume_dto_1.default {
+const create_employer_dto_1 = require("./create-employer.dto");
+class UpdateEmployerDto extends create_employer_dto_1.default {
 }
 __decorate([
-    swagger_1.ApiProperty({ type: "number", description: "Resume ID ", maxLength: 500 }),
+    swagger_1.ApiProperty({ type: "number", description: "employer id", maxLength: 500 }),
     __metadata("design:type", Number)
-], UpdateResumeDto.prototype, "resumeID", void 0);
-exports.default = UpdateResumeDto;
-//# sourceMappingURL=update-resume.dto.js.map
+], UpdateEmployerDto.prototype, "employerID", void 0);
+exports.default = UpdateEmployerDto;
+//# sourceMappingURL=update-employer.dto.js.map

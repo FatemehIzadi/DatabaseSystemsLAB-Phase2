@@ -1,4 +1,4 @@
-import CreateSkillDto from './create-resume.dto';
-export default class UpdateSkillDto extends CreateSkillDto {
+import CreateResumeDto from './create-resume.dto';
+export default class UpdateResumeDto extends CreateResumeDto {
     readonly resumeID: number;
 }

@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import CreateSkillDto from './create-resume.dto';
+import CreateResumeDto from './create-resume.dto';
 
 export default class UpdateResumeDto extends CreateResumeDto {
     @ApiProperty({type: "number", description:"Resume ID ", maxLength: 500})

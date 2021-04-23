@@ -11,11 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const swagger_1 = require("@nestjs/swagger");
 const create_offer_dto_1 = require("./create-offer.dto");
-class UpdateOrderDto extends create_offer_dto_1.default {
+class UpdateOfferDto extends create_offer_dto_1.default {
 }
 __decorate([
     swagger_1.ApiProperty({ type: "number", description: "Offer ID", maxLength: 500 }),
     __metadata("design:type", Number)
-], UpdateOrderDto.prototype, "offrtID", void 0);
-exports.default = UpdateOrderDto;
+], UpdateOfferDto.prototype, "offrtID", void 0);
+exports.default = UpdateOfferDto;
 //# sourceMappingURL=update-offer.dto.js.map
