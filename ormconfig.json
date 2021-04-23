@@ -3,9 +3,9 @@
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
-    "username": "dblab",
-    "password": "dblab",
-    "database": "todoapp",
+    "username": "mytestuser",
+    "password": "MyStr0ngP@SS",
+    "database": "mytestdb",
     "entities": [
         "dist/**/**.entity{.ts,.js}"
     ],
