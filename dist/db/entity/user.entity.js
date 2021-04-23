@@ -16,6 +16,10 @@ let UserEntity = class UserEntity extends typeorm_1.BaseEntity {
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", String)
+], UserEntity.prototype, "userID", void 0);
+__decorate([
+    typeorm_1.Column({ length: 500 }),
+    __metadata("design:type", String)
 ], UserEntity.prototype, "username", void 0);
 __decorate([
     typeorm_1.Column({ length: 32 }),

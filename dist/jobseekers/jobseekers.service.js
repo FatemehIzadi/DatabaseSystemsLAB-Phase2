@@ -36,8 +36,8 @@ let JobseekersService = class JobseekersService {
     }
     async insertSkill(skillDetails, freelancerID) {
         const skillEntity = skill_entity_1.default.create();
-        const { skillID, descr, level } = skillDetails;
-        skillEntity.skillID = skillID;
+        const { category, descr, level } = skillDetails;
+        skillEntity.category = category;
         skillEntity.freelancerID = await freelancer_entity_1.default.findOne(freelancerID);
         skillEntity.descr = descr;
         skillEntity.level = level;
@@ -46,8 +46,7 @@ let JobseekersService = class JobseekersService {
     }
     async insertOffer(orderDetails, employerID) {
         const offerEntity = offer_entity_1.default.create();
-        const { offerID, income, deadline, priority, category, minExp } = orderDetails;
-        offerEntity.offerID = offerID;
+        const { income, deadline, priority, category, minExp } = orderDetails;
         offerEntity.employerID = await employer_entity_1.default.findOne(employerID);
         offerEntity.income = income;
         offerEntity.deadline = deadline;
@@ -59,8 +58,7 @@ let JobseekersService = class JobseekersService {
     }
     async insertResume(ResumeDetails, freelancerID) {
         const resumeEntity = resume_entity_1.default.create();
-        const { resumeID, descr } = ResumeDetails;
-        resumeEntity.resumeID = resumeID;
+        const { descr } = ResumeDetails;
         resumeEntity.freelancerID = await freelancer_entity_1.default.findOne(freelancerID);
         resumeEntity.descr = descr;
         await resume_entity_1.default.save(resumeEntity);

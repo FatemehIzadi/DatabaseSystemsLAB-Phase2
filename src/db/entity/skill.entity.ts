@@ -8,6 +8,9 @@ export default class SkillEntity extends BaseEntity {
     skillID: number;
 
     @Column({ length: 500 })
+    category: string;
+
+    @Column({ length: 500 })
     descr: string;
 
     @Column()

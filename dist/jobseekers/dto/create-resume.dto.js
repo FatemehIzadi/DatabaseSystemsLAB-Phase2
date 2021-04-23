@@ -13,10 +13,6 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateResumeDto {
 }
 __decorate([
-    swagger_1.ApiProperty({ type: "number", description: "Resume ID", maxLength: 500 }),
-    __metadata("design:type", Number)
-], CreateResumeDto.prototype, "resumeID", void 0);
-__decorate([
     swagger_1.ApiProperty({ type: "string", description: "Resume description" }),
     __metadata("design:type", String)
 ], CreateResumeDto.prototype, "descr", void 0);

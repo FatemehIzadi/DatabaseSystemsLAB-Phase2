@@ -1,8 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export default class CreateSkillDto {
-    @ApiProperty({type: "number", description:"Skill ID", maxLength: 500})
-    readonly skillID: number;
+
+    @ApiProperty({type: "string", description:"Skill category", maxLength: 500})
+    readonly category: string;
 
     @ApiProperty({type: "string", description:"Skill description"})
     readonly descr: string;

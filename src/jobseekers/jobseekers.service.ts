@@ -34,8 +34,8 @@ export class JobseekersService {
   }
   async insertSkill(skillDetails: CreateSkillDto, freelancerID: number): Promise<SkillEntity> {
     const skillEntity:SkillEntity = SkillEntity.create();
-    const {skillID, descr, level} = skillDetails;
-    skillEntity.skillID = skillID;
+    const {category, descr, level} = skillDetails;
+    skillEntity.category = category;
     skillEntity.freelancerID = await FreelancerEntity.findOne(freelancerID);
     skillEntity.descr = descr;
     skillEntity.level = level;
@@ -44,8 +44,7 @@ export class JobseekersService {
   }
   async insertOffer(orderDetails: CreateOfferDto, employerID: number): Promise<OfferEntity> {
     const offerEntity: OfferEntity = OfferEntity.create();
-    const {offerID, income, deadline, priority, category, minExp} = orderDetails;
-    offerEntity.offerID = offerID;
+    const {income, deadline, priority, category, minExp} = orderDetails;
     offerEntity.employerID = await EmployerEntity.findOne(employerID);
     offerEntity.income = income;
     offerEntity.deadline = deadline;
@@ -58,8 +57,7 @@ export class JobseekersService {
 
   async insertResume(ResumeDetails: CreateResumeDto, freelancerID: number): Promise<ResumeEntity> {
     const resumeEntity:ResumeEntity = ResumeEntity.create();
-    const {resumeID, descr} = ResumeDetails;
-    resumeEntity.resumeID = resumeID;
+    const {descr} = ResumeDetails;
     resumeEntity.freelancerID = await FreelancerEntity.findOne(freelancerID);
     resumeEntity.descr = descr;
     await ResumeEntity.save(resumeEntity);

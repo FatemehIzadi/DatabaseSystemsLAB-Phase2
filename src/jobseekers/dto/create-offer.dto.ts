@@ -2,9 +2,6 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export default class CreateOrderDto {
 
-    @ApiProperty({type: "number", description:"Offer ID", maxLength: 500})
-    readonly offerID: number;
-
     @ApiProperty({type: "number", description:"Offer income"})
     readonly income: number;
 

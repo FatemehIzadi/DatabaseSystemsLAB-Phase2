@@ -5,6 +5,9 @@ import BookEntity from './book.entity';
 export default class UserEntity extends BaseEntity {
 
     @PrimaryGeneratedColumn()
+    userID: string;
+
+    @Column({ length:500 })
     username: string;
 
     @Column({ length: 32 })

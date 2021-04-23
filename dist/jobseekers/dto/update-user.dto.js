@@ -10,19 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const swagger_1 = require("@nestjs/swagger");
-class CreateSkillDto {
+const create_user_dto_1 = require("./create-user.dto");
+class UpdateUserDto extends create_user_dto_1.default {
 }
 __decorate([
-    swagger_1.ApiProperty({ type: "string", description: "Skill category", maxLength: 500 }),
-    __metadata("design:type", String)
-], CreateSkillDto.prototype, "category", void 0);
-__decorate([
-    swagger_1.ApiProperty({ type: "string", description: "Skill description" }),
-    __metadata("design:type", String)
-], CreateSkillDto.prototype, "descr", void 0);
-__decorate([
-    swagger_1.ApiProperty({ type: "number", description: "Skill level" }),
+    swagger_1.ApiProperty({ type: "number", description: "User ID", maxLength: 500 }),
     __metadata("design:type", Number)
-], CreateSkillDto.prototype, "level", void 0);
-exports.default = CreateSkillDto;
-//# sourceMappingURL=create-skill.dto.js.map
+], UpdateUserDto.prototype, "userID", void 0);
+exports.default = UpdateUserDto;
+//# sourceMappingURL=update-user.dto.js.map
