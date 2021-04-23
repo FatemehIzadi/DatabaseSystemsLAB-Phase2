@@ -18,6 +18,7 @@ import GenreEntity from './db/entity/genre.entity';
         ),
 
         TypeOrmModule.forRoot(),
+
     ],
     controllers: [AppController],
     providers: [AppService],

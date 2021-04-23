@@ -3,5 +3,6 @@ import BookEntity from './book.entity';
 export default class UserEntity extends BaseEntity {
     id: number;
     name: string;
+    password: string;
     books: BookEntity[];
 }

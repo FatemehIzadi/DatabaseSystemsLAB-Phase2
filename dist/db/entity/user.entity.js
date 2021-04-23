@@ -22,6 +22,10 @@ __decorate([
     __metadata("design:type", String)
 ], UserEntity.prototype, "name", void 0);
 __decorate([
+    typeorm_1.Column({ length: 32 }),
+    __metadata("design:type", String)
+], UserEntity.prototype, "password", void 0);
+__decorate([
     typeorm_1.OneToMany(type => book_entity_1.default, book => book.user),
     __metadata("design:type", Array)
 ], UserEntity.prototype, "books", void 0);

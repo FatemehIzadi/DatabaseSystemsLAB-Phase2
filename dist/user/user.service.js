@@ -25,6 +25,9 @@ let UserService = class UserService {
         const user = await user_entity_1.default.findOne({ where: { id: userID }, relations: ['books'] });
         return user.books;
     }
+    async findOne(username) {
+        return user_entity_1.default.findOne({ where: { name: username } });
+    }
 };
 UserService = __decorate([
     common_1.Injectable()
